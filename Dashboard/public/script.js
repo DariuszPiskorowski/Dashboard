@@ -43,5 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     createGaugeChart(ctx1, 17); // Example temperature values adjusted
     createGaugeChart(ctx2, 20);
-    createGaugeChart(ctx3, 100);
+    createGaugeChart(ctx3, 25);
 });
