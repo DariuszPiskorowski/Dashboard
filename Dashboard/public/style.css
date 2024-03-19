@@ -1,0 +1,45 @@
+body {
+    background-color: #121212; /* Very dark gray */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures elements wrap if not fitting in a single row */
+    margin: 20px;
+}
+
+.chart {
+    flex-basis: 22%; /* Specifies the initial width for each chart, leaving space for the button */
+    max-width: 22%; /* Prevents charts from stretching beyond this value */
+    width: 100px; /* Adjust width */
+    height: 100px; /* Adjust height */
+    margin: 10px; /* Adds some space around the charts */
+}    
+
+
+.relay {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    background-color: gray;
+    color: white;
+    flex-basis: 22%; /* Ensures the button has the same width as charts */
+    max-width: 22%; /* Prevents the button from stretching beyond this value */
+}
+
+/* Styles for ON/OFF button */
+.off {
+    background-color: gray;
+}
+
+.on {
+    background-color: blue;
+    color: white;
+}
