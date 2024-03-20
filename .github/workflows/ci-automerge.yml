@@ -1,24 +1,22 @@
+name: CI and Automerge
+
 on:
   push:
     branches:
       - master
+
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.x
-      - name: Navigate to Dashboard directory
-        run: cd Dashboard
-      - name: Install NPM dependencies
-        run: npm install
-        working-directory: ./Dashboard
-      - name: Run tests
-        run: npm test
-        working-directory: ./Dashboard
+    - uses: actions/checkout@v2
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'
+    - run: npm install
+    - run: npm test
+
   automerge:
     needs: test
     if: ${{ success() }}
@@ -28,5 +26,5 @@ jobs:
       - name: Automerge
         uses: pascalgn/automerge-action@v0.14.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MERGE_METHOD: squash
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_METHOD: "squash"
