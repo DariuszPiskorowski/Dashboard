@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.0.0"
   }
 }
