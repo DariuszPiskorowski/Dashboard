@@ -3,7 +3,7 @@ name: CI and Automerge
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   test:
