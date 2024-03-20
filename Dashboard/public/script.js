@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    createGaugeChart(ctx1, 17); 
-    createGaugeChart(ctx2, 20);
-    createGaugeChart(ctx3, 25);
+    createGaugeChart(ctx1, 15); 
+    createGaugeChart(ctx2, 22);
+    createGaugeChart(ctx3, 28);
 });
